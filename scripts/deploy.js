@@ -12,9 +12,7 @@ async function main() {
 
   const lockedAmount = hre.ethers.parseEther("0.001");
 
-  const lock = await hre.ethers.deployContract("Lock", [unlockTime], {
-    value: lockedAmount,
-  });
+  const lock = await hre.ethers.deployContract("ThirdERC20Token");
 
   await lock.waitForDeployment();
 

@@ -11,6 +11,16 @@
   "license": "ISC",
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "@nomicfoundation/hardhat-verify": "^2.0.3",
+    "@nomiclabs/hardhat-etherscan": "^3.1.8",
+    "@openzeppelin/hardhat-upgrades": "^3.0.2",
+    "ethers": "^6.10.0",
     "hardhat": "^2.19.4"
+  },
+  "dependencies": {
+    "@ganache/console.log": "0.4.2",
+    "@openzeppelin/contracts": "^4.9.5",
+    "chai": "^4.4.1",
+    "dotenv": "^16.3.1"
   }
 }
