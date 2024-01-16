@@ -6,6 +6,9 @@ require("dotenv").config();
 module.exports = {
   solidity: "0.8.20",
   networks: {
+    etherscan: {
+      apiKey: "1UF6NKNVYE7DP6W5QMFJ3ZN7YCM4K4B2XG",
+    },
     goerli: {
       // Ankr's Public RPC URL
       url: process.env.INFURA_GOERLI_ENDPOINT,
