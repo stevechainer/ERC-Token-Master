@@ -11,3 +11,6 @@ REPORT_GAS=true npx hardhat test
 npx hardhat node
 npx hardhat run scripts/deploy.js
 ```
+
+Token Name: ThirdERC20Token
+Token Addr: 0x6360D34780c9d2514cE5c5DBf32328CFAF55351d
