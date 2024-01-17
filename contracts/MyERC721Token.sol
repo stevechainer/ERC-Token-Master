@@ -5,10 +5,10 @@ import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Burnable.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
-contract ThirdERC20Token is ERC20, ERC20Burnable, Ownable {
+contract MyERC721Token is ERC20, ERC20Burnable, Ownable {
     uint256 private _initialSupply = 10_000_000;
 
-    constructor() ERC20("ThirdERC20Token", "TET") {
+    constructor() ERC20("MyERC721Token", "TET") {
         _mint(msg.sender, _initialSupply * (10 ** decimals()));
     }
 
