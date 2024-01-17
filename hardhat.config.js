@@ -15,5 +15,12 @@ module.exports = {
       // PRIVATE_KEY loaded from .env file
       accounts: [`0x${process.env.PRIVATE_KEY}`],
     },
+    goerli: {
+      // Ankr's Public RPC URL
+      url: process.env.INFURA_GOERLI_ENDPOINT,
+      // PRIVATE_KEY loaded from .env file
+      accounts: [`0x${process.env.PRIVATE_KEY}`],
+      
+    },
   },
 };

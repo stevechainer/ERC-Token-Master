@@ -1,26 +1,11 @@
-// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.20;
 
-import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
-import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Burnable.sol";
-import "@openzeppelin/contracts/access/Ownable.sol";
+import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
+import "@openzeppelin/contracts/utils/Counters.sol";
 
-contract MyERC721Token is ERC20, ERC20Burnable, Ownable {
-    uint256 private _initialSupply = 10_000_000;
+contract MyERC721Token is ERC721 {
+    using Counters for Counters.Counter;
+    Counters.Counter private _tokenIds;
 
-    constructor() ERC20("MyERC721Token", "TET") {
-        _mint(msg.sender, _initialSupply * (10 ** decimals()));
-    }
-
-    function mint(address account, uint256 amount) public onlyOwner {
-        _mint(account, amount);
-    }
-
-    function burn(address account, uint256 amount) public onlyOwner {
-        _burn(account, amount);
-    }
-
-    function decimals() public view virtual override returns (uint8) {
-        return 6;
-    }
+    constructor() public ERC721("MyERC721Token", "MET") {}
 }
